@@ -1,26 +1,27 @@
-// Initialize Firebase
-var config = {
+  // Initialize Firebase
+  var config = {
     apiKey: "AIzaSyD7r0imnUkAxpQNFoTxmPXR14shF2kt6SI",
     authDomain: "train-ec105.firebaseapp.com",
     databaseURL: "https://train-ec105.firebaseio.com",
     projectId: "train-ec105",
-    storageBucket: "",
+    storageBucket: "train-ec105.appspot.com",
     messagingSenderId: "703908357541"
   };
   firebase.initializeApp(config);
+
 
   var trainData = firebase.database();
 
   $("#add-train-button").on("click", function(event) {
       event.preventDefault();
 
-      var trainName = $("#train-Name-input")
+      var trainName = $("#train-name-input")
       .val()
       .trim();
       var destination = $("#destination-input")
       .val()
       .trim();
-      var firstTrain = $("#first-Train-input")
+      var firstTrain = $("#first-train-input")
       .val()
       .trim();
       var frequency = $("#frequency-input")
